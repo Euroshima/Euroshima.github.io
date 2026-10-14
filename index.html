@@ -75,6 +75,10 @@ h1 .g::after{color:var(--magenta);transform:translate(3px,0);mix-blend-mode:scre
 .stat:nth-child(even) .n{color:var(--magenta);text-shadow:0 0 18px rgba(255,46,136,.45)}
 .stat .l{color:var(--dim);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-top:8px}
 
+.ticker{margin:22px 0 0;overflow:hidden;border-block:1px solid var(--line);background:rgba(25,227,255,.04);padding:12px 0;white-space:nowrap}
+.ticker .track{display:inline-flex;animation:tick 28s linear infinite}
+.ticker span{font-family:var(--display);font-weight:700;letter-spacing:.18em;color:var(--cyan);padding-right:.6em;font-size:14px}
+@keyframes tick{to{transform:translateX(-50%)}}
 h2{font-family:var(--display);font-weight:700;font-size:clamp(22px,3.4vw,32px);text-transform:uppercase;letter-spacing:.06em;margin:56px 0 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 h2 .h{color:var(--magenta);font-family:var(--mono);font-weight:400;font-size:.7em}
 h2::after{content:"";flex:1;min-width:40px;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
@@ -161,14 +165,9 @@ footer{margin-top:28px;color:var(--dim);font-size:12px;text-align:center}
     </div>
   </section>
 
-  <div class="stats">
-    <div class="win stat"><div class="n" data-count="2020">2020</div><div class="l">contributions / an</div></div>
-    <div class="win stat"><div class="n" data-count="585">585</div><div class="l">commits en octobre 2026</div></div>
-    <div class="win stat"><div class="n" data-count="17">17</div><div class="l">pull requests ouvertes</div></div>
-    <div class="win stat"><div class="n" data-count="4">4</div><div class="l">nouveaux repos ce mois-ci</div></div>
-  </div>
+  <div class="ticker" aria-hidden="true"><div class="track"><span>SITES SUR MESURE ✦ UX DESIGN ✦ DÉVELOPPEMENT ✦ SEO ✦ PERFORMANCE ✦ E-COMMERCE ✦ APPLICATIONS WEB ✦ </span><span>SITES SUR MESURE ✦ UX DESIGN ✦ DÉVELOPPEMENT ✦ SEO ✦ PERFORMANCE ✦ E-COMMERCE ✦ APPLICATIONS WEB ✦ </span></div></div>
 
-  <h2 id="company"><span class="h">//</span> Mon entreprise</h2>
+  <h2 id="company" style="margin-top:44px"><span class="h">//</span> Mon entreprise</h2>
   <section class="company">
     <div class="win"><div class="body">
       <h3>Hytris<span>Web</span></h3>
