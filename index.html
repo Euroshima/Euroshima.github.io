@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Euroshima</title>
+<meta name="description" content="Kevin (Euroshima), full-stack developer and founder of Hytris. Custom websites, UX, SEO, security and web apps. Auxerre, France.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kevin · Euroshima">
+<meta property="og:description" content="Full-stack developer · Founder of Hytris. Custom websites, UX, SEO, security and web apps.">
+<meta property="og:url" content="https://euroshima.github.io/">
+<meta property="og:image" content="https://euroshima.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://euroshima.github.io/og-image.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,6 +126,8 @@ h2::after{content:"";flex:1;min-width:40px;height:1px;background:linear-gradient
 .contact h2{justify-content:center;margin-top:0} .contact h2::after{display:none}
 .contact p{color:var(--dim);margin:0 auto 22px;max-width:52ch}
 .contact .btns{justify-content:center}
+.mail{margin:22px 0 0;color:var(--dim)}.mail span{color:var(--fg)}
+.copy{font:inherit;font-size:12px;margin-left:8px;padding:3px 10px;border:1px solid var(--line);background:transparent;color:var(--cyan);cursor:pointer;border-radius:3px}.copy:hover{border-color:var(--cyan)}
 footer{margin-top:28px;color:var(--dim);font-size:12px;text-align:center}
 
 @media (max-width:860px){
@@ -202,6 +212,8 @@ footer{margin-top:28px;color:var(--dim);font-size:12px;text-align:center}
     <h2>Got a project in mind?</h2>
     <p>Showcase site, online store or web app: let's talk. Everything happens on hytris.net.</p>
     <div class="btns"><a class="btn" href="https://hytris.net" target="_blank" rel="noopener">hytris.net ↗</a><a class="btn alt" href="https://github.com/Euroshima" target="_blank" rel="noopener">GitHub</a></div>
+    <p class="mail">Email: <span id="mail">kevin@hytris.net</span> <button class="copy" id="copy" type="button">copy</button></p>
+    <div class="btns" hidden></div>
   </section>
   <footer>© 2026 Kevin · Euroshima · Auxerre — build: ok</footer>
 </div>
@@ -229,6 +241,9 @@ footer{margin-top:28px;color:var(--dim);font-size:12px;text-align:center}
     (function f(n){var p=Math.min((n-s)/1200,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3))).toLocaleString('fr-CA');if(p<1)requestAnimationFrame(f)})(s);
   });
 })();
+var cb=document.getElementById('copy');
+  if(cb)cb.addEventListener('click',function(){var t='kevin@hytris.net';function ok(){cb.textContent='copied';setTimeout(function(){cb.textContent='copy'},1500)}
+    if(navigator.clipboard)navigator.clipboard.writeText(t).then(ok,function(){});else{var r=document.createRange();r.selectNode(document.getElementById('mail'));getSelection().removeAllRanges();getSelection().addRange(r)}});
 </script>
 </body>
 </html>
